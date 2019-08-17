@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Inicio</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            Nombre: <h:inputText required="true" requiredMessage="Ingrese un nombre" value="#{controladorFormulario.nombre}"></h:inputText>
+            <br/>
+            <br/>
+
+            Salario por dia:  <h:inputText required="true" requiredMessage="Ingrese el salario" value="#{controladorFormulario.salarioDia}"></h:inputText>
+            <br/>
+            <br/>
+
+            Dias trabajados: <h:inputText required="true" requiredMessage="Ingrese los dias trabajados" value="#{controladorFormulario.diasTrabajados}"></h:inputText>
+            <br/>
+            <br/>
+
+            Idiomas:
+            <h:selectManyCheckbox value="#{controladorFormulario.idiomas}">
+                <f:selectItem itemValue="espanol" itemLabel="Español"></f:selectItem>
+                <f:selectItem itemValue="ingles" itemLabel="Ingles"></f:selectItem>
+                <f:selectItem itemValue="frances" itemLabel="Frances"></f:selectItem>
+                <f:selectItem itemValue="mandarin" itemLabel="Mandarin"></f:selectItem>
+            </h:selectManyCheckbox>
+            <br/>
+            <h:commandButton action="#{controladorFormulario.redirigir()}" value="Calcular" ></h:commandButton>
+        </h:form>
+    </h:body>
+</html>
+
